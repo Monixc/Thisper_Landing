@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Pragati Narrow", sans-serif !important;
+  background-color: white; /*전체 배경 색 흰색*/
 }
 img {
   max-width: 100%;
@@ -27,7 +28,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 90px;
+  min-height: 150px; /*상단 nav 영역 높이 150px*/
 }
 .navbar-menu-container {
   display: none;
@@ -41,13 +42,14 @@ nav {
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
-  background-color: white;
+  background-color: #323949;
+  color: white;
   outline: none;
   border: none;
   border-radius: 5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   transition: 0.2s;
 }
 .navbar-cart-icon {
