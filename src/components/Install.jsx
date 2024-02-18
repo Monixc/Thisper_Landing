@@ -2,6 +2,20 @@ import React from "react";
 import Tail from "../Assets/Tail.png";
 import Face from "../Assets/Face.png";
 import styled, { css } from "styled-components";
+const sizes = {
+  desktop: 1100,
+  tablet: 800,
+  phone: 600,
+};
+
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label]}px) {
+      ${css(...args)};
+    }
+  `;
+  return acc;
+}, {});
 const InstallContainer = styled.div`
   position: relative;
   display: flex;
@@ -32,6 +46,18 @@ const InstallTextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  ${media.desktop`
+  max-width: 50rem;
+  
+  `}
+  ${media.tablet`
+  max-width: 40rem;
+  `}
+  ${media.phone`
+  max-width: 20rem;
+  text-align: center;
+  `}
 `;
 const ContentText = styled.text`
   max-width: 60rem;
@@ -39,7 +65,7 @@ const ContentText = styled.text`
   color: white;
 `;
 const BoldText = styled.text`
-  font-size: clamp(4rem, 7vw, 5rem);
+  font-size: clamp(2rem, 7vw, 3rem);
   font-weight: 700;
   color: white;
 `;
@@ -55,10 +81,21 @@ margin-top: 3rem;
   cursor: pointer;
   font-weight: 700;
   transition: 0.2s;
-
+  ${media.desktop`
+  max-width: 50rem;
+  
+  `}
+  ${media.tablet`
+  max-width: 40rem;
+  `}
+  ${media.phone`
+  padding: 0.1rem 1rem;
+  `}
   &:hover{
     background-color: rgb(234, 234, 234);}
   }
+
+ 
 `;
 
 const Install = () => {

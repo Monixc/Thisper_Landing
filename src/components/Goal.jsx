@@ -1,7 +1,20 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import MainGoal from "../Assets/MainGoal.png";
+const sizes = {
+  desktop: 1100,
+  tablet: 800,
+  phone: 600,
+};
 
+const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label]}px) {
+      ${css(...args)};
+    }
+  `;
+  return acc;
+}, {});
 const GoalContainer = styled.div`
   position: relative;
   display: flex;
@@ -11,14 +24,37 @@ const GoalContainer = styled.div`
   min-height: 50rem;
   margin-top: -10rem;
   background-color: #f5f5f5;
+
+  ${media.tablet`
+  margin-top: 0rem;
+  `}
 `;
 const ImageContainer = styled.div`
   max-width: 60rem;
+
+  ${media.desktop`
+  max-width: 50rem;
+  `}
+  ${media.tablet`
+  max-width: 40rem;
+  `}
+  ${media.phone`
+  max-width: 20rem;
+  `}
 `;
 const TextContainer = styled.div`
   margin-top: 5rem;
   text-align: center;
   padding-bottom: 5rem;
+  ${media.desktop`
+  max-width: 50rem;
+  `}
+  ${media.tablet`
+  max-width: 40rem;
+  `}
+  ${media.phone`
+  max-width: 20rem;
+  `}
 `;
 const TitleText = styled.div`
   font-size: clamp(4rem, 7vw, 5rem);
