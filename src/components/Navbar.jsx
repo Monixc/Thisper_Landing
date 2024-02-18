@@ -5,6 +5,8 @@ import styled, { css } from "styled-components";
 import {
   Box,
   Drawer,
+  Divider,
+  List,
   ListItem,
   ListItemButton,
   ListItemIcon,
@@ -102,7 +104,7 @@ const PrimaryButton = styled.button`
 /**/
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const menuOption = [
+  const menuOptions = [
     { text: "Home", icon: <HomeIcon /> },
     {
       text: "About",
@@ -127,7 +129,19 @@ const Navbar = () => {
           sx={{ width: 250 }}
           role="presentation"
           onClick={() => setOpenMenu(false)}
-          onKeyDown={() => setOpenMenu(false)}></Box>
+          onKeyDown={() => setOpenMenu(false)}>
+          <List>
+            {menuOptions.map((item) => (
+              <ListItem key={item.text} disablePadding>
+                <ListItemIcon sx={{ color: "#323949" }}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+        </Box>
       </Drawer>
     </Nav>
   );
