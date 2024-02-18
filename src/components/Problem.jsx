@@ -61,27 +61,25 @@ const ProblemImageContainer = styled.div`
   `}
  
   ${media.phone`
-  max-width: 3rem;
-  margin-left: 0rem;
-  margin-right: 0.5rem;
+  display: none;
   `}
 `;
 
 const ProblemTextContainer = styled.div`
   display: flex;
-  margin-top: -20rem;
+  margin-top: -17rem;
   margin-right: 5rem;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+
+  align-items: center;
 
   ${media.desktop`
   margin-right: 1rem;
   margin-top: -21rem;
   `}
   ${media.phone`
-  margin-right: 1rem;
+  margin-right: 0rem;
   margin-top: -21.5rem;
   `}
 `;
@@ -91,8 +89,18 @@ const PrimaryText = styled.text`
   max-width: 60rem;
   margin: 1.5rem 0rem;
 
-  ${media.tablet`
+  ${media.desktop`
   text-align: left;
+    max-width: 100%;
+    margin-right: 1.5rem;
+    `}
+  ${media.tablet`
+  text-align: center;
+    max-width: 90%;
+    `}
+  ${media.phone`
+  margin: 1.5rem;
+  text-align: center;
     max-width: 100%;
     `}
 `;
