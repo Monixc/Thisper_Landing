@@ -2,9 +2,9 @@ import React from "react";
 import styled, { css } from "styled-components";
 import MainGoal from "../Assets/MainGoal.png";
 const sizes = {
-  desktop: 1100,
-  tablet: 800,
-  phone: 600,
+  desktop: 1024,
+  tablet: 768,
+  phone: 480,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -43,7 +43,7 @@ const ImageContainer = styled.div`
   `}
 `;
 const TextContainer = styled.div`
-  margin-top: 5rem;
+  margin-top: 1rem;
   text-align: center;
   padding-bottom: 5rem;
   ${media.desktop`

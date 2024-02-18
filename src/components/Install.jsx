@@ -3,9 +3,9 @@ import Tail from "../Assets/Tail.png";
 import Face from "../Assets/Face.png";
 import styled, { css } from "styled-components";
 const sizes = {
-  desktop: 1100,
-  tablet: 800,
-  phone: 600,
+  desktop: 1024,
+  tablet: 768,
+  phone: 480,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {

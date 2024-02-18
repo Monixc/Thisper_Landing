@@ -6,9 +6,9 @@ import styled, { css } from "styled-components";
 
 /*스타일*/
 const sizes = {
-  desktop: 1000,
-  tablet: 800,
-  phone: 600,
+  desktop: 1024,
+  tablet: 768,
+  phone: 480,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -37,6 +37,10 @@ const HomeBannerContainer = styled.div`
   justify-content: center;
   padding-top: 3rem;
   margin: 0rem 2rem;
+  `}
+  
+  ${media.phone`
+  padding-top: 9rem;
   `}
 `;
 

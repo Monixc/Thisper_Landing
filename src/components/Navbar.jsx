@@ -20,9 +20,9 @@ import { IoMdDownload } from "react-icons/io";
 /*스타일*/
 
 const sizes = {
-  desktop: 1100,
-  tablet: 800,
-  phone: 600,
+  desktop: 1024,
+  tablet: 768,
+  phone: 480,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -59,15 +59,15 @@ const Nav = styled.nav`
 const NavLogoContainer = styled.div`
   width: 21rem;
   ${media.desktop`
-  width: 12rem;
+  width: 18rem;
   margin-left: 0.5rem;`}
 
   ${media.tablet`
-  width: 12rem;
+  width: 14rem;
   `}
 
   ${media.phone`
-  width: 8rem;
+  width: 12rem;
   `}
 `;
 const NavMenuContainer = styled.div`

@@ -4,9 +4,9 @@ import YouTube from "../Assets/Youtube.png";
 import SolutionTitle from "../Assets/SolutionTitle.png";
 import Blob3 from "../Assets/Blob3.png";
 const sizes = {
-  desktop: 1100,
-  tablet: 800,
-  phone: 600,
+  desktop: 1024,
+  tablet: 768,
+  phone: 480,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -81,7 +81,7 @@ const SoulutionSectionContainer = styled.div`
   justify-content: center;
   margin: 1.5rem;
   padding-top: 3rem;
-  margin-top: -35rem;
+  margin-top: -30rem;
   padding-left: 0rem;
   `}
 `;
