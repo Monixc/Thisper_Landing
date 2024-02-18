@@ -20,8 +20,9 @@ import HomeIcon from "@mui/icons-material/Home";
 /*스타일*/
 
 const sizes = {
-  desktop: 1000,
+  desktop: 1100,
   tablet: 800,
+  phone: 600,
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
@@ -38,7 +39,21 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   min-height: 5rem;
+  margin-top: 0.5rem;
+  width: 100%;
   border-bottom: solid 2px #b5b5b5;
+
+  ${media.desktop`
+  min-height: 5rem;
+  margin-top: 0.5rem;`}
+  ${media.tablet`
+  min-height: 4rem;
+  margin-top: 0.5rem;
+  `} 
+  ${media.phone`
+  min-height: 3rem;
+  margin-top: 0.5rem;
+  `};
 `;
 
 const NavLogoContainer = styled.div`
@@ -48,6 +63,10 @@ const NavLogoContainer = styled.div`
   margin-left: 0.5rem;`}
 
   ${media.tablet`
+  width: 12rem;
+  `}
+
+  ${media.phone`
   width: 8rem;
   `}
 `;
@@ -56,6 +75,11 @@ const NavMenuContainer = styled.div`
 
   ${media.tablet`
   display: flex;
+  max-width: 5rem;
+  `}
+  ${media.phone`
+  display: flex;
+  max-width: 5rem;
   `}
 `;
 const NavLinkContainer = styled.div`
@@ -100,7 +124,16 @@ const PrimaryButton = styled.button`
     background-color: rgb(234, 234, 234);}
   }
 `;
-
+const Icon = styled.div`
+  width: 2rem;
+  font-size: 1.5rem;
+`;
+const ListContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-left: 2rem;
+`;
 /**/
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -116,13 +149,17 @@ const Navbar = () => {
       <NavLogoContainer>
         <img src={Logo} alt="" />
       </NavLogoContainer>
+      <Divider />
       <NavLinkContainer>
         <NavLink href="">Home</NavLink>
         <NavLink href="">About</NavLink>
         <PrimaryButton className="primary-button">Install Now</PrimaryButton>
       </NavLinkContainer>
+
       <NavMenuContainer>
-        <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+        <Icon>
+          <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
+        </Icon>
       </NavMenuContainer>
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
         <Box
@@ -133,10 +170,12 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemIcon sx={{ color: "#323949" }}>
-                  {item.icon}
-                </ListItemIcon>
-                <ListItemText primary={item.text} />
+                <ListContainer>
+                  <ListItemIcon sx={{ color: "#323949" }}>
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.text} />
+                </ListContainer>
               </ListItem>
             ))}
           </List>
