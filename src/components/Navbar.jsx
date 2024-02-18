@@ -16,7 +16,7 @@ import {
 import { HiOutlineBars3 } from "react-icons/hi2";
 import InfoIcon from "@mui/icons-material/Info";
 import HomeIcon from "@mui/icons-material/Home";
-
+import { IoMdDownload } from "react-icons/io";
 /*스타일*/
 
 const sizes = {
@@ -142,6 +142,12 @@ const Navbar = () => {
     {
       text: "About",
       icon: <InfoIcon />,
+      url: "https://brassy-afternoon-c57.notion.site/Thisper-Thoughtful-Whisper-27316488c811465195694079a0f592c0?pvs=4",
+    },
+    {
+      text: "Install",
+      icon: <IoMdDownload />,
+      url: "https://github.com/Thoughtful-Whisper",
     },
   ];
   return (
@@ -152,8 +158,19 @@ const Navbar = () => {
       <Divider />
       <NavLinkContainer>
         <NavLink href="">Home</NavLink>
-        <NavLink href="">About</NavLink>
-        <PrimaryButton className="primary-button">Install Now</PrimaryButton>
+        <NavLink
+          onClick={() =>
+            (window.location.href =
+              "https://brassy-afternoon-c57.notion.site/Thisper-Thoughtful-Whisper-27316488c811465195694079a0f592c0?pvs=4")
+          }>
+          About
+        </NavLink>
+        <PrimaryButton
+          onClick={() =>
+            (window.location.href = "https://github.com/Thoughtful-Whisper")
+          }>
+          Install Now
+        </PrimaryButton>
       </NavLinkContainer>
 
       <NavMenuContainer>
@@ -169,7 +186,10 @@ const Navbar = () => {
           onKeyDown={() => setOpenMenu(false)}>
           <List>
             {menuOptions.map((item) => (
-              <ListItem key={item.text} disablePadding>
+              <ListItem
+                key={item.text}
+                disablePadding
+                onClick={() => (window.location.href = item.url)}>
                 <ListContainer>
                   <ListItemIcon sx={{ color: "#323949" }}>
                     {item.icon}

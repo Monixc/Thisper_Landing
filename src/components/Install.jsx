@@ -109,7 +109,12 @@ const Install = () => {
           Join us in cultivating a healthier comment culture!
         </ContentText>
         <BoldText>Install Thisper now</BoldText>
-        <Button>Try Now</Button>
+        <Button
+          onClick={() =>
+            (window.location.href = "https://github.com/Thoughtful-Whisper")
+          }>
+          Try Now
+        </Button>
       </InstallTextContainer>
       <InstallFace>
         <img src={Face} alt="" />
