@@ -50,11 +50,12 @@ const SolutionTitleImage = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  margin-top: -9rem;
+  margin-top: -7rem;
   margin-right: 2rem;
   max-width: 18rem;
-
+  ${media.desktop`max-width: 14rem;`}
   ${media.tablet`max-width: 12rem;`}
+  ${media.phone`max-width: 12rem; margin-top: -15rem;`}
 `;
 const SoulutionSectionContainer = styled.div`
   position: relative;
@@ -92,9 +93,9 @@ const SoulutionImageSeciton = styled.div`
   margin-right: 7rem;
 
   ${media.desktop`
-  max-width: 32rem;
+  max-width: 30rem;
 margin-right: 2rem;
-  margin-top: 12rem;`}
+  margin-top: 10rem;`}
   ${media.tablet`
   max-width: 30rem;
 margin-right: 0rem;
@@ -112,6 +113,7 @@ const SolutionTextSeciton = styled.div`
 
   ${media.desktop`
   margin-right:0rem;
+  margin-top: 10rem;
     `}
   ${media.tablet`
   margin-right:0rem;
@@ -121,7 +123,7 @@ const SolutionTextSeciton = styled.div`
     `}
 `;
 const PrimaryText = styled.text`
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
   max-width: 70rem;
   margin: 1.5rem 0rem;
 
@@ -134,6 +136,15 @@ const PrimaryText = styled.text`
   text-align: center;
     max-width: 90%;
     `}
+  ${media.phone`
+margin: 0rem;
+  text-align: center;
+    max-width: 95%;
+    `}
+`;
+
+const P = styled.p`
+  margin-top: 1.5rem;
   ${media.phone`
 margin: 0rem;
   text-align: center;
@@ -155,11 +166,26 @@ const Solution = () => {
         </SoulutionImageSeciton>
         <SolutionTextSeciton>
           <PrimaryText>
-            Thisper analyzes YouTube comments, visualizing excessive bias and
-            malicious comments in Red. In this way, Thisper serves as a catalyst
-            for change, transforming the internet from a battlefield of
-            conflicting views into a platform for constructive dialogue and
-            mutual respect.{" "}
+            <P>
+              Thisper analyzes YouTube comments and visualizes excessive biases
+              and malicious comments in red as a warning to users. It also
+              provides a chat window where users can discuss their thoughts and
+              stories about the visualized comments.
+            </P>
+            <P>
+              If a user finds a comment that they enjoyed and agreed with a lot
+              being colored in red, it could be an opportunity to reflect on
+              whether they have been thinking too one-sidedly. If they can have
+              many conversations with GPT about this, they can naturally develop
+              their ability to have logical and constructive discussions.
+            </P>
+            <P>
+              {" "}
+              In this way, Thisper will approach our current society, which
+              lacks understanding and respect for others and has severe
+              conflicts, like a wise whisper, making great efforts to create a
+              better internet world.{" "}
+            </P>
           </PrimaryText>
         </SolutionTextSeciton>
       </SoulutionSectionContainer>

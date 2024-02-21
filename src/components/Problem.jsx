@@ -67,16 +67,16 @@ const ProblemImageContainer = styled.div`
 
 const ProblemTextContainer = styled.div`
   display: flex;
-  margin-top: -17rem;
+  margin-top: -18rem;
   margin-right: 5rem;
   flex: 1;
   flex-direction: column;
 
-  align-items: center;
+  align-items: left;
 
   ${media.desktop`
   margin-right: 1rem;
-  margin-top: -21rem;
+  margin-top: -20rem;
   `}
   ${media.phone`
   margin-right: 0rem;
@@ -85,7 +85,7 @@ const ProblemTextContainer = styled.div`
 `;
 
 const PrimaryText = styled.text`
-  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
   max-width: 60rem;
   margin: 1.5rem 0rem;
 
@@ -99,12 +99,31 @@ const PrimaryText = styled.text`
     max-width: 90%;
     `}
   ${media.phone`
-  margin: 1.5rem;
+  margin: 0.2rem 1.5rem;
   text-align: center;
     max-width: 100%;
     `}
 `;
 
+const P = styled.p`
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  max-width: 60rem;
+  text-align: left;
+  ${media.desktop`
+  text-align: left;
+    max-width: 100%;
+    margin-right: 1.5rem;
+    `}
+  ${media.tablet`
+  text-align: center;
+    max-width: 90%;
+    `}
+  ${media.phone`
+  margin:0.2rem 1.5rem;
+  text-align: center;
+    max-width: 100%;
+    `}
+`;
 const Problem = () => {
   return (
     <ProblemSectionContainer>
@@ -128,6 +147,33 @@ const Problem = () => {
             imposition of certain idelogies. Thes negative aspects not only
             stifle constructive debate but also breed a toxic environment that
             can be harmful to user’s mental health.
+          </PrimaryText>
+          <PrimaryText>
+            In order to solve these issues, we have considered the following
+            approaches:
+          </PrimaryText>
+          <P>
+            1. Education: We emphasize on educating about online behavior,
+            conversation norms, and ways to discern the credibility of
+            information.
+          </P>
+          <P>
+            2. Strengthening Platform Policies: We reinforce the policies of
+            social media platforms for managing and removing malicious comments
+            and biased information.
+          </P>
+          <P>
+            3. Encouraging User Participation: We support efforts by users to
+            recognize and improve the problems of internet communities.
+          </P>
+          <P>
+            4. Utilizing Technology: We use artificial intelligence to
+            automatically detect and manage biased or hateful remarks.
+          </P>
+          <PrimaryText>
+            Through these approaches, we are confident that we can solve the
+            problems of the internet environment, and to realize this, we have
+            developed Thisper.
           </PrimaryText>
         </ProblemTextContainer>
       </ProblemBannerContainer>

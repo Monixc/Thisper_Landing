@@ -120,10 +120,11 @@ const Home = () => {
         <TextSection>
           <PrimaryHeading>Welcome to Thisper!</PrimaryHeading>
           <PrimaryText>
-            This chrome extension analyses YouTube comments, visualizing
-            excessive bias and malicious comments in color. Take a stand against
-            the rampant polarizantion and hostility in our modern internet
-            culture with “Thisper”
+            Thisper evaluates users' comments for biased or contradictory
+            content, visualizes them with colors, and facilitates communication
+            with GPT about these comments, helping to shape individual ethical
+            values on the internet. Use Thisper to create a better internet
+            world!
           </PrimaryText>
         </TextSection>
         <ImageSection>

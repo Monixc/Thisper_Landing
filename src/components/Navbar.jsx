@@ -99,7 +99,7 @@ const NavLink = styled.a`
   color: black;
   font-size: 1.1rem;
   font-weight: 600;
-
+  cursor: pointer;
   ${media.desktop`
   margin-right:1rem;
   font-size:1rem;`}
