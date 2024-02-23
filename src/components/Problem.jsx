@@ -85,7 +85,7 @@ const ProblemTextContainer = styled.div`
 `;
 
 const PrimaryText = styled.text`
-  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   max-width: 60rem;
   margin: 1.5rem 0rem;
 
@@ -147,33 +147,6 @@ const Problem = () => {
             imposition of certain idelogies. Thes negative aspects not only
             stifle constructive debate but also breed a toxic environment that
             can be harmful to user’s mental health.
-          </PrimaryText>
-          <PrimaryText>
-            In order to solve these issues, we have considered the following
-            approaches:
-          </PrimaryText>
-          <P>
-            1. Education: We emphasize on educating about online behavior,
-            conversation norms, and ways to discern the credibility of
-            information.
-          </P>
-          <P>
-            2. Strengthening Platform Policies: We reinforce the policies of
-            social media platforms for managing and removing malicious comments
-            and biased information.
-          </P>
-          <P>
-            3. Encouraging User Participation: We support efforts by users to
-            recognize and improve the problems of internet communities.
-          </P>
-          <P>
-            4. Utilizing Technology: We use artificial intelligence to
-            automatically detect and manage biased or hateful remarks.
-          </P>
-          <PrimaryText>
-            Through these approaches, we are confident that we can solve the
-            problems of the internet environment, and to realize this, we have
-            developed Thisper.
           </PrimaryText>
         </ProblemTextContainer>
       </ProblemBannerContainer>
