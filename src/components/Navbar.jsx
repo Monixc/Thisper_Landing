@@ -161,7 +161,7 @@ const Navbar = () => {
         <NavLink
           onClick={() =>
             (window.location.href =
-              "https://brassy-afternoon-c57.notion.site/Thisper-Thoughtful-Whisper-27316488c811465195694079a0f592c0?pvs=4")
+              "https://www.youtube.com/watch?v=zM_3zmYrca4")
           }>
           About
         </NavLink>
