@@ -140,9 +140,9 @@ const Navbar = () => {
   const menuOptions = [
     { text: "Home", icon: <HomeIcon /> },
     {
-      text: "About",
+      text: "Youtube",
       icon: <InfoIcon />,
-      url: "https://brassy-afternoon-c57.notion.site/Thisper-Thoughtful-Whisper-27316488c811465195694079a0f592c0?pvs=4",
+      url: "https://www.youtube.com/watch?v=zM_3zmYrca4",
     },
     {
       text: "Install",
