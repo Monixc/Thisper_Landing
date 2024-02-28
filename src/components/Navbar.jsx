@@ -147,7 +147,7 @@ const Navbar = () => {
     {
       text: "Install",
       icon: <IoMdDownload />,
-      url: "https://github.com/Thoughtful-Whisper",
+      url: "https://chromewebstore.google.com/detail/thisper/gmphehbcobjkkofdhieadnffocpmlgjp?hl=ko&utm_source=ext_sidebar",
     },
   ];
   return (
@@ -167,7 +167,7 @@ const Navbar = () => {
         </NavLink>
         <PrimaryButton
           onClick={() =>
-            (window.location.href = "https://github.com/Thoughtful-Whisper")
+            (window.location.href = "https://chromewebstore.google.com/detail/thisper/gmphehbcobjkkofdhieadnffocpmlgjp?hl=ko&utm_source=ext_sidebar")
           }>
           Install Now
         </PrimaryButton>
