@@ -111,7 +111,7 @@ const Install = () => {
         <BoldText>Install Thisper now</BoldText>
         <Button
           onClick={() =>
-            (window.location.href = "https://github.com/Thoughtful-Whisper")
+            (window.location.href = "https://chromewebstore.google.com/detail/thisper/gmphehbcobjkkofdhieadnffocpmlgjp?hl=ko&utm_source=ext_sidebar")
           }>
           Try Now
         </Button>
